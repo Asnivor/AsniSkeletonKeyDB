@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="skeletonKeyModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=D:\Dropbox\Dropbox\_Programming\SKDB\AsniSkeletonKeyDB\SKDB\SKDB\DBFile\skeletonKey.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SK_Game">
+          <Key>
+            <PropertyRef Name="gid" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="gid" Type="integer" Nullable="false" />
+          <Property Name="plot" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="releasedate" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="genre" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="developer" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="publisher" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="players" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="rating" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="ESRB" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="videourl01" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="videourl02" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="videourl03" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="videourl04" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="videourl05" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="gamefaqs_url" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="mobygames_url" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="giantbomb_url" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxart01" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxart02" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxart03" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxart04" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxart05" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxart06" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxart07" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxart08" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxart09" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxart10" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxback01" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxback02" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxback03" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxback04" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxback05" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxback06" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxback07" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxback08" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxback09" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="boxback10" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="media" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot01" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot02" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot03" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot04" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot05" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot06" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot07" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot08" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot09" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot10" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot11" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot12" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot13" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot14" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot15" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot16" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot17" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot18" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot19" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="snapshot20" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart01" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart02" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart03" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart04" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart05" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart06" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart07" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart08" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart09" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart10" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart11" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart12" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart13" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart14" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart15" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart16" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart17" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart18" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart19" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="fanart20" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="banner01" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="banner02" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="banner03" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="banner04" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="banner05" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="clearlogo01" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="clearlogo02" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="clearlogo03" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="clearlogo04" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="clearlogo05" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="notes" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="pid" Type="integer" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SK_System">
+          <Key>
+            <PropertyRef Name="pid" />
+          </Key>
+          <Property Name="pid" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityContainer Name="skeletonKeyModelStoreContainer">
+          <EntitySet Name="SK_Game" EntityType="Self.SK_Game" store:Type="Tables" />
+          <EntitySet Name="SK_System" EntityType="Self.SK_System" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="skeletonKeyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SK_Game">
+          <Key>
+            <PropertyRef Name="gid" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="gid" Type="Int64" Nullable="false" />
+          <Property Name="plot" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="releasedate" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="genre" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="developer" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="publisher" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="players" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="rating" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="ESRB" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="videourl01" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="videourl02" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="videourl03" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="videourl04" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="videourl05" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="gamefaqs_url" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="mobygames_url" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="giantbomb_url" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxart01" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxart02" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxart03" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxart04" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxart05" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxart06" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxart07" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxart08" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxart09" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxart10" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxback01" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxback02" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxback03" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxback04" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxback05" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxback06" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxback07" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxback08" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxback09" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="boxback10" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="media" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot01" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot02" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot03" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot04" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot05" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot06" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot07" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot08" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot09" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot10" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot11" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot12" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot13" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot14" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot15" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot16" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot17" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot18" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot19" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="snapshot20" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart01" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart02" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart03" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart04" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart05" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart06" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart07" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart08" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart09" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart10" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart11" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart12" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart13" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart14" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart15" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart16" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart17" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart18" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart19" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="fanart20" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="banner01" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="banner02" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="banner03" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="banner04" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="banner05" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="clearlogo01" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="clearlogo02" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="clearlogo03" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="clearlogo04" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="clearlogo05" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="notes" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="pid" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SK_System">
+          <Key>
+            <PropertyRef Name="pid" />
+          </Key>
+          <Property Name="pid" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="skeletonKeyEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SK_Game" EntityType="Self.SK_Game" />
+          <EntitySet Name="SK_System" EntityType="Self.SK_System" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="skeletonKeyModelStoreContainer" CdmEntityContainer="skeletonKeyEntities">
+          <EntitySetMapping Name="SK_Game">
+            <EntityTypeMapping TypeName="skeletonKeyModel.SK_Game">
+              <MappingFragment StoreEntitySet="SK_Game">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="gid" ColumnName="gid" />
+                <ScalarProperty Name="plot" ColumnName="plot" />
+                <ScalarProperty Name="releasedate" ColumnName="releasedate" />
+                <ScalarProperty Name="genre" ColumnName="genre" />
+                <ScalarProperty Name="developer" ColumnName="developer" />
+                <ScalarProperty Name="publisher" ColumnName="publisher" />
+                <ScalarProperty Name="players" ColumnName="players" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="ESRB" ColumnName="ESRB" />
+                <ScalarProperty Name="videourl01" ColumnName="videourl01" />
+                <ScalarProperty Name="videourl02" ColumnName="videourl02" />
+                <ScalarProperty Name="videourl03" ColumnName="videourl03" />
+                <ScalarProperty Name="videourl04" ColumnName="videourl04" />
+                <ScalarProperty Name="videourl05" ColumnName="videourl05" />
+                <ScalarProperty Name="gamefaqs_url" ColumnName="gamefaqs_url" />
+                <ScalarProperty Name="mobygames_url" ColumnName="mobygames_url" />
+                <ScalarProperty Name="giantbomb_url" ColumnName="giantbomb_url" />
+                <ScalarProperty Name="boxart01" ColumnName="boxart01" />
+                <ScalarProperty Name="boxart02" ColumnName="boxart02" />
+                <ScalarProperty Name="boxart03" ColumnName="boxart03" />
+                <ScalarProperty Name="boxart04" ColumnName="boxart04" />
+                <ScalarProperty Name="boxart05" ColumnName="boxart05" />
+                <ScalarProperty Name="boxart06" ColumnName="boxart06" />
+                <ScalarProperty Name="boxart07" ColumnName="boxart07" />
+                <ScalarProperty Name="boxart08" ColumnName="boxart08" />
+                <ScalarProperty Name="boxart09" ColumnName="boxart09" />
+                <ScalarProperty Name="boxart10" ColumnName="boxart10" />
+                <ScalarProperty Name="boxback01" ColumnName="boxback01" />
+                <ScalarProperty Name="boxback02" ColumnName="boxback02" />
+                <ScalarProperty Name="boxback03" ColumnName="boxback03" />
+                <ScalarProperty Name="boxback04" ColumnName="boxback04" />
+                <ScalarProperty Name="boxback05" ColumnName="boxback05" />
+                <ScalarProperty Name="boxback06" ColumnName="boxback06" />
+                <ScalarProperty Name="boxback07" ColumnName="boxback07" />
+                <ScalarProperty Name="boxback08" ColumnName="boxback08" />
+                <ScalarProperty Name="boxback09" ColumnName="boxback09" />
+                <ScalarProperty Name="boxback10" ColumnName="boxback10" />
+                <ScalarProperty Name="media" ColumnName="media" />
+                <ScalarProperty Name="snapshot01" ColumnName="snapshot01" />
+                <ScalarProperty Name="snapshot02" ColumnName="snapshot02" />
+                <ScalarProperty Name="snapshot03" ColumnName="snapshot03" />
+                <ScalarProperty Name="snapshot04" ColumnName="snapshot04" />
+                <ScalarProperty Name="snapshot05" ColumnName="snapshot05" />
+                <ScalarProperty Name="snapshot06" ColumnName="snapshot06" />
+                <ScalarProperty Name="snapshot07" ColumnName="snapshot07" />
+                <ScalarProperty Name="snapshot08" ColumnName="snapshot08" />
+                <ScalarProperty Name="snapshot09" ColumnName="snapshot09" />
+                <ScalarProperty Name="snapshot10" ColumnName="snapshot10" />
+                <ScalarProperty Name="snapshot11" ColumnName="snapshot11" />
+                <ScalarProperty Name="snapshot12" ColumnName="snapshot12" />
+                <ScalarProperty Name="snapshot13" ColumnName="snapshot13" />
+                <ScalarProperty Name="snapshot14" ColumnName="snapshot14" />
+                <ScalarProperty Name="snapshot15" ColumnName="snapshot15" />
+                <ScalarProperty Name="snapshot16" ColumnName="snapshot16" />
+                <ScalarProperty Name="snapshot17" ColumnName="snapshot17" />
+                <ScalarProperty Name="snapshot18" ColumnName="snapshot18" />
+                <ScalarProperty Name="snapshot19" ColumnName="snapshot19" />
+                <ScalarProperty Name="snapshot20" ColumnName="snapshot20" />
+                <ScalarProperty Name="fanart01" ColumnName="fanart01" />
+                <ScalarProperty Name="fanart02" ColumnName="fanart02" />
+                <ScalarProperty Name="fanart03" ColumnName="fanart03" />
+                <ScalarProperty Name="fanart04" ColumnName="fanart04" />
+                <ScalarProperty Name="fanart05" ColumnName="fanart05" />
+                <ScalarProperty Name="fanart06" ColumnName="fanart06" />
+                <ScalarProperty Name="fanart07" ColumnName="fanart07" />
+                <ScalarProperty Name="fanart08" ColumnName="fanart08" />
+                <ScalarProperty Name="fanart09" ColumnName="fanart09" />
+                <ScalarProperty Name="fanart10" ColumnName="fanart10" />
+                <ScalarProperty Name="fanart11" ColumnName="fanart11" />
+                <ScalarProperty Name="fanart12" ColumnName="fanart12" />
+                <ScalarProperty Name="fanart13" ColumnName="fanart13" />
+                <ScalarProperty Name="fanart14" ColumnName="fanart14" />
+                <ScalarProperty Name="fanart15" ColumnName="fanart15" />
+                <ScalarProperty Name="fanart16" ColumnName="fanart16" />
+                <ScalarProperty Name="fanart17" ColumnName="fanart17" />
+                <ScalarProperty Name="fanart18" ColumnName="fanart18" />
+                <ScalarProperty Name="fanart19" ColumnName="fanart19" />
+                <ScalarProperty Name="fanart20" ColumnName="fanart20" />
+                <ScalarProperty Name="banner01" ColumnName="banner01" />
+                <ScalarProperty Name="banner02" ColumnName="banner02" />
+                <ScalarProperty Name="banner03" ColumnName="banner03" />
+                <ScalarProperty Name="banner04" ColumnName="banner04" />
+                <ScalarProperty Name="banner05" ColumnName="banner05" />
+                <ScalarProperty Name="clearlogo01" ColumnName="clearlogo01" />
+                <ScalarProperty Name="clearlogo02" ColumnName="clearlogo02" />
+                <ScalarProperty Name="clearlogo03" ColumnName="clearlogo03" />
+                <ScalarProperty Name="clearlogo04" ColumnName="clearlogo04" />
+                <ScalarProperty Name="clearlogo05" ColumnName="clearlogo05" />
+                <ScalarProperty Name="notes" ColumnName="notes" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SK_System">
+            <EntityTypeMapping TypeName="skeletonKeyModel.SK_System">
+              <MappingFragment StoreEntitySet="SK_System">
+                <ScalarProperty Name="pid" ColumnName="pid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

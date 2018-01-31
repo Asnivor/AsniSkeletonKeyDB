@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{41D2A967-797E-42A9-96DA-7C1A7A722E02}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SKDB</RootNamespace>
+    <AssemblyName>SKDB</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SevenZipSharp, Version=1.0.14.0, Culture=neutral, PublicKeyToken=c8ff6ba0184838bb, processorArchitecture=MSIL">
+      <HintPath>..\packages\SevenZipSharp.Net45.1.0.14\lib\net45\SevenZipSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.107.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.107.0\lib\net46\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.107.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.107.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.107.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.107.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Classes\Archive.cs" />
+    <Compile Include="Classes\DATFile.cs" />
+    <Compile Include="Classes\SkeletonDB.cs" />
+    <Compile Include="Database\SkeletonKeyModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkeletonKeyModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SkeletonKeyModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkeletonKeyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SkeletonKeyModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkeletonKeyModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SK_Game.cs">
+      <DependentUpon>SkeletonKeyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\SK_System.cs">
+      <DependentUpon>SkeletonKeyModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TextBoxBehaviour.cs" />
+    <Compile Include="TextBoxOutputter.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="Database\SkeletonKeyModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SkeletonKeyModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\SkeletonKeyModel.edmx.diagram">
+      <DependentUpon>SkeletonKeyModel.edmx</DependentUpon>
+    </None>
+    <None Include="DBFile\skeletonKey.db" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="SourceDATs\Acorn - BBC.7z" />
+    <None Include="SourceDATs\Acorn - Electron.7z" />
+    <None Include="SourceDATs\Amstrad - CPC.7z" />
+    <None Include="SourceDATs\Amstrad - GX4000.7z" />
+    <None Include="SourceDATs\Android.7z" />
+    <None Include="SourceDATs\APF - Imagination Machine.7z" />
+    <None Include="SourceDATs\Apogee - BK-101.7z" />
+    <None Include="SourceDATs\Apple - IIe.7z" />
+    <None Include="SourceDATs\Apple - IIgs.7z" />
+    <None Include="SourceDATs\Apple - iOS.7z" />
+    <None Include="SourceDATs\Apple - MacOS.7z" />
+    <None Include="SourceDATs\Atari - 2600.7z" />
+    <None Include="SourceDATs\Atari - 5200.7z" />
+    <None Include="SourceDATs\Atari - 7800.7z" />
+    <None Include="SourceDATs\Atari - 800.7z" />
+    <None Include="SourceDATs\Atari - Jaguar CD.7z" />
+    <None Include="SourceDATs\Atari - Jaguar.7z" />
+    <None Include="SourceDATs\Atari - Lynx.7z" />
+    <None Include="SourceDATs\Atari - ST.7z" />
+    <None Include="SourceDATs\Atari - XEGS.7z" />
+    <None Include="SourceDATs\Bally - Astrocade.7z" />
+    <None Include="SourceDATs\Bandai - WonderSwan Color.7z" />
+    <None Include="SourceDATs\Bandai - WonderSwan.7z" />
+    <None Include="SourceDATs\Camputers - Lynx.7z" />
+    <None Include="SourceDATs\Casio - Loopy.7z" />
+    <None Include="SourceDATs\Casio - PV-1000.7z" />
+    <None Include="SourceDATs\Coleco - Adam.7z" />
+    <None Include="SourceDATs\Coleco - Colecovision.7z" />
+    <None Include="SourceDATs\Commodore - 128.7z" />
+    <None Include="SourceDATs\Commodore - 64.7z" />
+    <None Include="SourceDATs\Commodore - Amiga CD32.7z" />
+    <None Include="SourceDATs\Commodore - Amiga CDTV.7z" />
+    <None Include="SourceDATs\Commodore - Amiga.7z" />
+    <None Include="SourceDATs\Commodore - MAX.7z" />
+    <None Include="SourceDATs\Commodore - Plus 4.7z" />
+    <None Include="SourceDATs\Commodore - VIC20.7z" />
+    <None Include="SourceDATs\Creatronic - Mega Duck.7z" />
+    <None Include="SourceDATs\DOS.7z" />
+    <None Include="SourceDATs\Dragon - 32-64.7z" />
+    <None Include="SourceDATs\Emerson - Arcadia 2001.7z" />
+    <None Include="SourceDATs\Enterprise - 128.7z" />
+    <None Include="SourceDATs\Entex - Adventure Vision.7z" />
+    <None Include="SourceDATs\Epoch - Game Pocket Computer.7z" />
+    <None Include="SourceDATs\Epoch - Super Cassette Vision.7z" />
+    <None Include="SourceDATs\Fairchild - Channel F.7z" />
+    <None Include="SourceDATs\Fujitsu - FM Towns.7z" />
+    <None Include="SourceDATs\Funtech - Super %27Acan.7z" />
+    <None Include="SourceDATs\GamePark - GP32.7z" />
+    <None Include="SourceDATs\GCE - Vectrex.7z" />
+    <None Include="SourceDATs\Hartung - Game Master.7z" />
+    <None Include="SourceDATs\Magnavox - Odyssey.7z" />
+    <None Include="SourceDATs\Magnavox - Odyssey2.7z" />
+    <None Include="SourceDATs\MAME - Arcade.7z" />
+    <None Include="SourceDATs\Mattel - Aquarius.7z" />
+    <None Include="SourceDATs\Mattel - Hyperscan.7z" />
+    <None Include="SourceDATs\Mattel - Intellivision.7z" />
+    <None Include="SourceDATs\Memotech - MTX.7z" />
+    <None Include="SourceDATs\Microsoft - MSX TurboR.7z" />
+    <None Include="SourceDATs\Microsoft - MSX.7z" />
+    <None Include="SourceDATs\Microsoft - MSX2.7z" />
+    <None Include="SourceDATs\Microsoft - Windows - 3x.7z" />
+    <None Include="SourceDATs\Microsoft - Xbox 360.7z" />
+    <None Include="SourceDATs\Microsoft - Xbox ONE.7z" />
+    <None Include="SourceDATs\Microsoft - Xbox.7z" />
+    <None Include="SourceDATs\Mugen.7z" />
+    <None Include="SourceDATs\NEC - PC Engine - TurboGrafx 16.7z" />
+    <None Include="SourceDATs\NEC - PC Engine CD - TurboGrafx CD.7z" />
+    <None Include="SourceDATs\NEC - PC Engine SuperGrafx.7z" />
+    <None Include="SourceDATs\NEC - PC-FX.7z" />
+    <None Include="SourceDATs\NEC - PC8801.7z" />
+    <None Include="SourceDATs\NEC - PC9801.7z" />
+    <None Include="SourceDATs\Nintendo - Famicom.7z" />
+    <None Include="SourceDATs\Nintendo - Game &amp; Watch.7z" />
+    <None Include="SourceDATs\Nintendo - Game Boy Advance.7z" />
+    <None Include="SourceDATs\Nintendo - Game Boy Color.7z" />
+    <None Include="SourceDATs\Nintendo - Game Boy.7z" />
+    <None Include="SourceDATs\Nintendo - Game Cube.7z" />
+    <None Include="SourceDATs\Nintendo - Nintendo 3DS.7z" />
+    <None Include="SourceDATs\Nintendo - Nintendo 64.7z" />
+    <None Include="SourceDATs\Nintendo - Nintendo 64DD.7z" />
+    <None Include="SourceDATs\Nintendo - Nintendo DS.7z" />
+    <None Include="SourceDATs\Nintendo - Nintendo Entertainment System.7z" />
+    <None Include="SourceDATs\Nintendo - Pokemon Mini.7z" />
+    <None Include="SourceDATs\Nintendo - Satellaview.7z" />
+    <None Include="SourceDATs\Nintendo - Super Nintendo Entertainment System.7z" />
+    <None Include="SourceDATs\Nintendo - Switch.7z" />
+    <None Include="SourceDATs\Nintendo - Virtual Boy.7z" />
+    <None Include="SourceDATs\Nintendo - Wii U.7z" />
+    <None Include="SourceDATs\Nintendo - Wii.7z" />
+    <None Include="SourceDATs\Nuon.7z" />
+    <None Include="SourceDATs\OpenBOR.7z" />
+    <None Include="SourceDATs\Oric - Atmos.7z" />
+    <None Include="SourceDATs\Ouya.7z" />
+    <None Include="SourceDATs\Philips - CD-I.7z" />
+    <None Include="SourceDATs\Philips - Videopac+.7z" />
+    <None Include="SourceDATs\Pinball.7z" />
+    <None Include="SourceDATs\SCUMMVM.7z" />
+    <None Include="SourceDATs\Sega - 32X.7z" />
+    <None Include="SourceDATs\Sega - Dreamcast.7z" />
+    <None Include="SourceDATs\Sega - Game Gear.7z" />
+    <None Include="SourceDATs\Sega - Hikaru.7z" />
+    <None Include="SourceDATs\Sega - Master System - Mark III.7z" />
+    <None Include="SourceDATs\Sega - Mega Drive - Genesis.7z" />
+    <None Include="SourceDATs\Sega - Mega-CD - Sega CD.7z" />
+    <None Include="SourceDATs\Sega - Model 2.7z" />
+    <None Include="SourceDATs\Sega - Model 3.7z" />
+    <None Include="SourceDATs\Sega - NAOMI.7z" />
+    <None Include="SourceDATs\Sega - PICO.7z" />
+    <None Include="SourceDATs\Sega - Saturn.7z" />
+    <None Include="SourceDATs\Sega - SC-3000.7z" />
+    <None Include="SourceDATs\Sega - SG-1000.7z" />
+    <None Include="SourceDATs\Sega - ST-V.7z" />
+    <None Include="SourceDATs\Sega - Triforce.7z" />
+    <None Include="SourceDATs\Sharp - X1.7z" />
+    <None Include="SourceDATs\Sharp - X68000.7z" />
+    <None Include="SourceDATs\Sinclair - ZX Spectrum.7z" />
+    <None Include="SourceDATs\SNK - Neo Geo AES.7z" />
+    <None Include="SourceDATs\SNK - Neo Geo CD.7z" />
+    <None Include="SourceDATs\SNK - Neo Geo Pocket Color.7z" />
+    <None Include="SourceDATs\SNK - Neo Geo Pocket.7z" />
+    <None Include="SourceDATs\Sony - Playstation 2.7z" />
+    <None Include="SourceDATs\Sony - Playstation 3.7z" />
+    <None Include="SourceDATs\Sony - Playstation 4.7z" />
+    <None Include="SourceDATs\Sony - Playstation Portable.7z" />
+    <None Include="SourceDATs\Sony - Playstation Vita.7z" />
+    <None Include="SourceDATs\Sony - Playstation.7z" />
+    <None Include="SourceDATs\Sord - M5.7z" />
+    <None Include="SourceDATs\supported.set" />
+    <None Include="SourceDATs\Taito - Taito Type X.7z" />
+    <None Include="SourceDATs\Tandy - CoCo.7z" />
+    <None Include="SourceDATs\Tandy - TRS-80.7z" />
+    <None Include="SourceDATs\Texas Instruments - TI 99-4A.7z" />
+    <None Include="SourceDATs\Tiger - Game.com.7z" />
+    <None Include="SourceDATs\Tomy - Tutor.7z" />
+    <None Include="SourceDATs\VTech - CreatiVision.7z" />
+    <None Include="SourceDATs\VTech - Socrates.7z" />
+    <None Include="SourceDATs\Watara - Supervision.7z" />
+    <None Include="SourceDATs\Web Browser.7z" />
+    <None Include="SourceDATs\Windows Games.7z" />
+    <None Include="SourceDATs\WOW - Action Max.7z" />
+    <None Include="SourceDATs\XaviXPORT.7z" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Database\SkeletonKeyModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SkeletonKeyModel.edmx</DependentUpon>
+      <LastGenOutput>SkeletonKeyModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\SkeletonKeyModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SkeletonKeyModel.edmx</DependentUpon>
+      <LastGenOutput>SkeletonKeyModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.107.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.107.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.107.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.107.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

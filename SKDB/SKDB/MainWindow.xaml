@@ -1,0 +1,20 @@
+﻿<Window x:Class="SKDB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SKDB"
+        mc:Ignorable="d"
+        Title="SKDB - skeletonKey DAT Tools" Height="600" Width="800">
+    <Grid>
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="30">
+            <Button Content="Initialize SKDB" Click="Button_Click" ToolTip="Checks the the existence of Database and DAT archives" />
+            <Button Name="btnEnumDbSystems" Content="Enumerate systems in the database" Click="btnEnumDbSystems_Click" />
+            <Button Name="btnEnumDatFiles" Content="Enumerate source DAT archives on disk" Click="btnEnumDatFiles_Click" />
+            <Button Name="btnProcessDATs" Content="Processes DAT file from disk" Click="btnProcessDATs_Click" />
+        </StackPanel>
+        
+        <TextBox Height="400" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" x:Name="TestBox"
+            local:TextBoxBehaviour.ScrollOnTextChanged="True" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+    </Grid>
+</Window>
