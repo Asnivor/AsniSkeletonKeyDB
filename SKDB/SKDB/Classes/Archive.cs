@@ -17,17 +17,19 @@ namespace SKDB.Classes
 
         public CompressionResults ProcessArchive(string ArchivePath)
         {
-            CompressionResults crs = new CompressionResults(ArchivePath);
+            var path = Path.GetFullPath(ArchivePath);
+
+            CompressionResults crs = new CompressionResults(path);
 
             // if file does not exist
-            if (!File.Exists(ArchivePath))
+            if (!File.Exists(path))
                 return null;
 
             // mount the archive
 
             try
             {
-                using (Stream archiveStream = File.OpenRead(ArchivePath))
+                using (Stream archiveStream = File.OpenRead(path))
                 {
                     using (var ar = new SevenZipExtractor(archiveStream))
                     {
@@ -54,7 +56,7 @@ namespace SKDB.Classes
                         foreach (var file in allowedFiles)
                         {
                             CompressionResult cr = new CompressionResult();
-                            cr.ArchivePath = ArchivePath;
+                            cr.ArchivePath = path;
                             cr.InternalPath = file.FileName.Replace("\\", "/");
                             cr.FileName = cr.InternalPath.Split('/').LastOrDefault();
                             cr.CRC32 = file.Crc.ToString("X");
@@ -86,6 +88,50 @@ namespace SKDB.Classes
 
 
             return crs;
+        }
+
+
+        /// <summary>
+        /// Extract a single file from an archive using an archivestream to a byte array
+        /// </summary>
+        /// <param name="archiveStream"></param>
+        /// <param name="internalFileName"></param>
+        /// <param name="outputDirectory"></param>
+        public static byte[] ExtractFileToByteArray(Stream archiveStream, string internalFileName)
+        {
+            byte[] content = null; 
+
+            try
+            {
+                using (SevenZipExtractor extr = new SevenZipExtractor(archiveStream))
+                {
+                    foreach (ArchiveFileInfo archiveFileInfo in extr.ArchiveFileData.Where(a => a.FileName.Replace("\\", "/") == internalFileName))
+                    {
+                        if (!archiveFileInfo.IsDirectory)
+                        {
+                            using (var mem = new MemoryStream())
+                            {
+                                extr.ExtractFile(archiveFileInfo.Index, mem);
+
+                                string shortFileName = Path.GetFileName(archiveFileInfo.FileName);
+                                content = mem.ToArray();
+                                //File.WriteAllBytes(outputDirectory + @"\" + shortFileName, content);
+
+                                //return content;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // problem with archive?
+                string exceptionMsg = ex.ToString();
+
+            }
+
+
+            return content;
         }
     }
 

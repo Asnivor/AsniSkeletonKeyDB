@@ -104,9 +104,20 @@ namespace SKDB
                 Archive arch = new Archive();
                 var results = arch.ProcessArchive(dat);
 
+                // process each archived file
+                foreach (var file in results.Results)
+                {
+                    using (Stream archiveStream = File.OpenRead(dat))
+                    {                    
+                        //archiveStream.Seek(0, SeekOrigin.Begin);
+                        byte[] fData = Archive.ExtractFileToByteArray(archiveStream, file.InternalPath);
+                        var str = Encoding.ASCII.GetString(fData);
+                    }
+                }
+
                 foreach (var res in results.Results)
                 {
-                    Console.WriteLine(res.InternalPath);
+                    //Console.WriteLine(res.InternalPath);
                 }
             }
             Console.WriteLine("------------Done------------");

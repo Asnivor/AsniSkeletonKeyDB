@@ -88,6 +88,7 @@
     <Compile Include="Classes\Archive.cs" />
     <Compile Include="Classes\DATFile.cs" />
     <Compile Include="Classes\SkeletonDB.cs" />
+    <Compile Include="Classes\XML.cs" />
     <Compile Include="Database\SkeletonKeyModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -305,6 +306,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="7z.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Database\SkeletonKeyModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SkeletonKeyModel.edmx</DependentUpon>
