@@ -8,11 +8,28 @@
         Title="SKDB - skeletonKey DAT Tools" Height="600" Width="800">
     <Grid>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="30">
-            <Button Content="Initialize SKDB" Click="Button_Click" ToolTip="Checks the the existence of Database and DAT archives" />
-            <Button Name="btnEnumDbSystems" Content="Enumerate systems in the database" Click="btnEnumDbSystems_Click" />
-            <Button Name="btnEnumDatFiles" Content="Enumerate source DAT archives on disk" Click="btnEnumDatFiles_Click" />
-            <Button Name="btnProcessDATs" Content="Processes DAT file from disk" Click="btnProcessDATs_Click" />
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="5">
+                <Label HorizontalContentAlignment="Center" FontSize="15" FontWeight="Bold">
+                    Test Functions
+                </Label>
+                <Button Content="Initialize SKDB" Click="Button_Click" ToolTip="Checks the the existence of Database and DAT archives" />
+                <Button Name="btnEnumDbSystems" Content="Enumerate systems in the database" Click="btnEnumDbSystems_Click" />
+                <Button Name="btnEnumDatFiles" Content="Enumerate source DAT archives on disk" Click="btnEnumDatFiles_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="5">
+                <Label HorizontalContentAlignment="Center" FontSize="15" FontWeight="Bold">
+                    Database Setup
+                </Label>
+                <Button Name="btnImportSystems" Content="Import DAT Systems to DB" Click="btnImportSystems_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="5">
+                <Label HorizontalContentAlignment="Center" FontSize="15" FontWeight="Bold">
+                    XML Processing
+                </Label>
+                <Button Name="btnProcessDATs" Content="Processes DAT file from disk" Click="btnProcessDATs_Click" />
+            </StackPanel>
         </StackPanel>
+        
         
         <TextBox Height="400" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" x:Name="TestBox"
             local:TextBoxBehaviour.ScrollOnTextChanged="True" ScrollViewer.VerticalScrollBarVisibility="Auto" />

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="skeletonKeyModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=D:\Dropbox\Dropbox\_Programming\SKDB\AsniSkeletonKeyDB\SKDB\SKDB\DBFile\skeletonKey.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="skeletonKeyModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=D:\Dropbox\Dropbox\_Programming\SKDB\AsniSkeletonKeyDB\SKDB\SKDB\DBFile\skeletonKey.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="SK_Game">
           <Key>
             <PropertyRef Name="gid" />
@@ -100,6 +100,7 @@
           <Property Name="clearlogo05" Type="nvarchar" MaxLength="2147483647" />
           <Property Name="notes" Type="nvarchar" MaxLength="2147483647" />
           <Property Name="pid" Type="integer" Nullable="false" />
+          <Property Name="WikipediaURL" Type="nvarchar" MaxLength="2147483647" />
         </EntityType>
         <EntityType Name="SK_System">
           <Key>
@@ -112,8 +113,7 @@
           <EntitySet Name="SK_Game" EntityType="Self.SK_Game" store:Type="Tables" />
           <EntitySet Name="SK_System" EntityType="Self.SK_System" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="skeletonKeyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -212,6 +212,7 @@
           <Property Name="clearlogo05" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
           <Property Name="notes" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
           <Property Name="pid" Type="Int64" Nullable="false" />
+          <Property Name="WikipediaURL" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="SK_System">
           <Key>
@@ -233,6 +234,7 @@
           <EntitySetMapping Name="SK_Game">
             <EntityTypeMapping TypeName="skeletonKeyModel.SK_Game">
               <MappingFragment StoreEntitySet="SK_Game">
+                <ScalarProperty Name="WikipediaURL" ColumnName="WikipediaURL" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="gid" ColumnName="gid" />
                 <ScalarProperty Name="plot" ColumnName="plot" />

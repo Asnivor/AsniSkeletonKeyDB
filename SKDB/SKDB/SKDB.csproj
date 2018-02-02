@@ -89,6 +89,7 @@
     <Compile Include="Classes\DATFile.cs" />
     <Compile Include="Classes\SkeletonDB.cs" />
     <Compile Include="Classes\XML.cs" />
+    <Compile Include="Database\DBFunctions.cs" />
     <Compile Include="Database\SkeletonKeyModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

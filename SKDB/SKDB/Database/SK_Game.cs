@@ -105,5 +105,6 @@ namespace SKDB.Database
         public string clearlogo05 { get; set; }
         public string notes { get; set; }
         public long pid { get; set; }
+        public string WikipediaURL { get; set; }
     }
 }
