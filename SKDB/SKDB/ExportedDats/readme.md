@@ -1,14 +1,13 @@
-﻿#### This is the current parsed and fixed skeletonKey DAT set.
+﻿### This is the current parsed and fixed skeletonKey DAT set.
 
 Each xml file has been parsed in the following manner:
 
 * Each starting XML tag has been captured along with its relevant data
 * TagNames (that have numbers appended) have then been re-numbered in order starting from 1 (this takes care of any duplicate tags and gaps in numbering)
-* XML has then been rebuilt with standard one-tab char indenting
+* XML has then been rebuilt with standard one-tab char indenting using and correct closing tags generated (which takes care of incorrect tag closure)
 
-Currently there are a number of files that could not be processed automatically (for whatever reason). These will need to be looked at manually.
+#### Currently there are a number of files that could not be processed automatically (for whatever reason) and were skipped. These will need to be looked at manually.
 They are as follows:
-
 
 ----------------
 ERRORs Detected: 34
