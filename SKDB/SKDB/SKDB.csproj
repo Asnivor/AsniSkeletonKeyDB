@@ -152,6 +152,8 @@
       <DependentUpon>SkeletonKeyModel.edmx</DependentUpon>
     </None>
     <None Include="DBFile\skeletonKey.db" />
+    <None Include="ExportedDATs\DATFILES.7z" />
+    <None Include="ExportedDATs\readme.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

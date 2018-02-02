@@ -26,7 +26,10 @@
                 <Label HorizontalContentAlignment="Center" FontSize="15" FontWeight="Bold">
                     XML Processing
                 </Label>
-                <Button Name="btnProcessDATs" Content="Processes DAT file from disk" Click="btnProcessDATs_Click" />
+                <Button Name="btnDeArchiveDATs" Content="Extract all DAT archives" Click="btnDeArchiveDATs_Click" />
+                <Button Name="btnProcessDATs" Content="Process xml files (WITHIN ARCHIVES) and reexport" Click="btnProcessDATs_Click" />
+                <Button Name="btnProcessDATsNoArchive" Content="Process xml files (ALREADY EXTRACTED) and reexport" Click="btnProcessDATsNoArchive_Click" />
+                <Button Name="btnArchiveDATs" Content="Archives all processed DATs" Click="btnArchiveDATs_Click" />
             </StackPanel>
         </StackPanel>
         

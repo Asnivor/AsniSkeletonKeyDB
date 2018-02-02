@@ -14,6 +14,33 @@ namespace SKDB.Classes
     /// </summary>
     public class Archive
     {
+        public bool CreateArchiveFromFolder(string folderPath, string outputdir, string archivename)
+        {
+            SevenZipCompressor compressor = new SevenZipCompressor();
+
+            try
+            {
+                if (File.Exists(outputdir + archivename + ".7z"))
+                {
+                    File.Delete(outputdir + archivename + ".7z");
+                }
+
+                compressor.CompressionMode = CompressionMode.Create;
+                compressor.CompressionLevel = CompressionLevel.Normal;
+                compressor.CustomParameters.Add("d", "22");
+                compressor.ArchiveFormat = OutArchiveFormat.SevenZip;
+                compressor.PreserveDirectoryRoot = true;
+                compressor.CompressDirectory(folderPath, outputdir + archivename + ".7z");
+
+                return true;
+            }
+            catch(Exception ex)
+            {
+                string exc = ex.ToString();
+            }
+
+            return false;
+        }
 
         public CompressionResults ProcessArchive(string ArchivePath)
         {

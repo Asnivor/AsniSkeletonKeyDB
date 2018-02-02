@@ -24,6 +24,8 @@ namespace SKDB.Classes
         {
             //MainWindow mw = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
 
+            bool errorDetected = false;
+
             List<XMLTag> allTags = new List<XMLTag>();
 
             // get rid of the parent <game></game> tags
@@ -45,11 +47,24 @@ namespace SKDB.Classes
                 t.TagName = tag;
 
                 // extract the data between the two tags
-                string value = new string(xmlString.Skip(v[i].Index).Take(v[i + 1].Index - v[i].Index).ToArray()).Replace(v[i].Groups[0].Value, "");
-                t.TagData = value;
+                try
+                {
+                    string value = new string(xmlString.Skip(v[i].Index).Take(v[i + 1].Index - v[i].Index).ToArray()).Replace(v[i].Groups[0].Value, "");
+                    t.TagData = value;
 
-                // add tag to list
-                allTags.Add(t);
+                    // add tag to list
+                    allTags.Add(t);
+                }
+                catch (Exception ex)
+                {
+                    return null;
+                }
+                
+
+            }
+
+            if (errorDetected)
+            {
 
             }
 
